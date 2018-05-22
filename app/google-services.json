@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "437359864214",
+    "firebase_url": "https://tarea-firebase.firebaseio.com",
+    "project_id": "tarea-firebase",
+    "storage_bucket": "tarea-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437359864214:android:cb27116884c4699f",
+        "android_client_info": {
+          "package_name": "com.example.wilop.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437359864214-n9sq02ftljrqbqpnasf8l84ckok4gi02.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wilop.firebase",
+            "certificate_hash": "927e87feb6420a1ad4801c5630b5bd3f2c43e31b"
+          }
+        },
+        {
+          "client_id": "437359864214-ecv5s37g20o06mpnktcjv8u3ov3o97ss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF8VB1WqFnC0RTRukWZ8Dii-A7N5LuAjM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437359864214-ecv5s37g20o06mpnktcjv8u3ov3o97ss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
