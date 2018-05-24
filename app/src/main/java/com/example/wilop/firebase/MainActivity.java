@@ -1,7 +1,9 @@
 package com.example.wilop.firebase;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     EditText Pname,Pdescription,Pprice;
     Button save_product;
     ConstraintLayout add_product;
+    ArrayList<String> Ids = new ArrayList<String>();
     ArrayList<String> Names = new ArrayList<String>();
     ArrayList<String> Prices = new ArrayList<String>();
     ArrayList<String> Description = new ArrayList<String>();
@@ -126,6 +130,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot ds : dataSnapshot.getChildren()){
+                    String Id = ds.getKey();
+                    Ids.add(Id);
                     String name = ds.child("Name").getValue(String.class);
                     Names.add(name);
                     String price = ds.child("Price").getValue(String.class);
@@ -134,16 +140,18 @@ public class MainActivity extends AppCompatActivity {
                     Description.add(description);
                     String url = ds.child("Url").getValue(String.class);
                     Url_Imagenes.add(url);
-                    Log.d("DATOS", name + " / " + description + " / " + price+ " / " +url);
+                    Log.d("DATOS", "Id: "+Id+" / "+name + " / " + description + " / " + price+ " / " +url);
                 }
-                ListaProductos.setAdapter(new Adapter_product(context,Names,Prices,Description));
+                ListaProductos.setAdapter(new Adapter_product(context,Names,Prices,Description,Url_Imagenes,Ids));
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
+
             }
         });
+
         }
 
     @Override
