@@ -90,25 +90,9 @@
                 android:inputType="number"
                 android:textAlignment="center" />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:text="File name"
-                android:textAlignment="center"
-                tools:text="File name" />
-
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
-                android:layout_marginRight="80dp"
-                app:srcCompat="@android:drawable/stat_sys_upload_done" />
-
             <Button
                 android:id="@+id/save_data"
+                android:layout_marginTop="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="80dp"
