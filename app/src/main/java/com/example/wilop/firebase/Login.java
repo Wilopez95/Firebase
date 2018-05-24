@@ -23,12 +23,12 @@ public class Login extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     //Verificar al iniciar la activity si ya el usuario se logeo
-    /*@Override
+    @Override
     protected void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
-    }*/
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
